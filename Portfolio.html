@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="Icona Iniziali.jpg"/>
+    
+    <style>
+     .container{
+        display: flex;
+        background-color: cornflowerblue;
+        font-size: larger;
+        font-family:"Sour Gummy", sans-serif;;
+    }
+    .container p {
+        width: 50%;
+        text-align: center;
+    
+    }
+    img {
+       
+        width: 200px;
+    }
+    
+    header{
+        display: flex;
+        background-color: rgb(243, 236, 236);
+        font-size: x-large;
+    }
+    
+    header ul{
+        width: 50%;
+        font-size: x-large;
+        text-align:left;
+        font-family:"Sour Gummy", sans-serif;
+    }
+    
+    h1 {
+        width: 40%;
+        text-align:left;
+        font-family:"Sour Gummy", sans-serif;
+    
+    }
+    header p{
+        width: 40%;
+        text-align:LEFT;
+    }
+    .custom{
+        font-size:25px;
+        font-family:"Sour Gummy", sans-serif;
+        grid-area:context;
+        background-color: rgb(246, 247, 247);
+    }
+    #img1{
+        grid-area: img1;
+    }
+    
+    #img2{
+        grid-area: img2;
+    
+    }
+    
+    #img3{
+        grid-area: img3;
+    }
+    #spazio{
+        grid-area: spazio;
+        width: 3em;
+        background-color: rgb(168, 197, 243);
+    }
+    #context{
+        display: grid;
+        grid-template-rows: 1fr,1fr,1fr,1fr,1fr,1fr;
+        grid-template-columns:2fr,1fr,1fr,1fr;
+        grid-template-areas:"spazio   context context .   "
+                            "spazio   context context img1"
+                            "spazio   context context .   "
+                            "spazio   context context img2"
+                            "spazio   context context .  "
+                            "spazio   context context img3";
+                            
+     }
+    
+        </style>
+    
+    </head>
+    <body>
+    <header>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-primary"><a href="file:///C:/Users/ceril/Desktop/CORSO%20WEB/Portfolio.html">Home</a></button>
+            <button type="button" class="btn btn-primary"><a href="CV CERILLI MARCO.pdf">Curriculum Vitae</a></button>
+            <button type="button" class="btn btn-primary"><a href="https://calendar.app.google/hdcJu86hnSvuBrZo9">Prenota una call</a></button>
+
+          </div>
+
+        <h1>Marco Cerilli WebSite</h1>
+    <p>
+        <img src ="foto marco.JPG">
+    </p>
+    
+    </header>
+    
+    <div id="context">
+    
+    <img src="social-3.jpg" id="img1">
+    <img src="social-2.jpg" id="img2">
+    <img src=""     id="">
+    
+    <div id="spazio">
+    
+    </div>
+        <p class="custom">
+             Sono un appassionato di tecnologia e informatica con un forte interesse per
+             l'innovazione maturato nel corso delle mie esperienze professionali pluriennali.
+             Sono in cerca di nuove esperienze nel settore tecnologico/informatico per il
+             quale sono fortemente motivato
+        
+        </p>
+    </div>
+    
+    
+    <div class= "container">
+        <p>cerillimarco15@gmail.com <br>
+           cell:+39 3804291043
+          
+    
+        </p>
+        
+    <p>
+        <button type="button" class="btn btn-secondary btn-lg"><a href="https://www.linkedin.com/in/marco-cerilli/">Linkedin</a></button>
+    </p>
+
+
+
+        </div>
+        
+    
+    
+    
+    
+    </div>
+    
+    
+    </body>
+    
+    
+    </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
