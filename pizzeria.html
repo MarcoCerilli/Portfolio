@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzeria</title>
+    <style>
+        body {
+      
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-align: center;
+            font-size:larger;
+            padding: 30px;
+        }
+        body {
+    background-image: url('pizza sfondo.jpg');
+    background-size: cover; /* L'immagine copre tutta la pagina */
+    background-repeat: no-repeat; /* Evita che l'immagine si ripeta */
+    background-position: center; /* Centra l'immagine */
+}
+
+html{
+    scroll-behavior: smooth;
+}
+        nav {
+    background-color: #333;
+    padding: 8px;
+}
+
+.menu {
+    list-style:cross-fade();
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /* Allinea il menu a destra */
+}
+
+.menu li {
+    margin: 10px;
+}
+
+.menu a {
+    text-decoration:;
+    color: white;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+
+     #pizza{
+     color:#ffffff;
+     font-size: 30px;
+}
+
+  
+        select {
+            font-size: 20px;
+            padding: 10px;
+            margin-bottom: 20px;
+            color: rgb(0, 0, 0);
+            background-color: rgb(255, 255, 255);
+        }
+        img {
+            width: 50%;
+            height:auto;
+            margin:auto;
+        }
+        .pizza-info {
+            color:#ffffff;
+            font-size:35px;
+        
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="#file:///C:/Users/ceril/Desktop/CORSO%20WEB/pizzeria.html#home">Home</a></li>
+            <li><a href="#about">Chi Siamo</a></li>
+            <li><a href="#services">Servizi</a></li>
+            <li><a href="contatti.html.txt">Contatti</a>
+            </li>
+
+
+
+        </ul>
+    </nav>
+
+
+
+    <h1><img src="Lo scugnizzo.jpeg" alt="Pizzeria Lo Scugnizzo"></h1>
+    <p id="pizza">Scegli una pizza dal menu:
+    
+    </p>
+
+    <select id="pizzaSelect">
+        <option value="">-- Seleziona una pizza --</option>
+        <option value="margherita">Margherita</option>
+        <option value="capricciosa">Capricciosa</option>
+        <option value="diavola">Diavola</option>
+        <option value="quattro_formaggi">Quattro Formaggi</option>
+        <option value="boscaiola">Boscaiola</option>
+    </select>
+
+  
+    <div id="pizzaDetails" style="display: none;">
+        <img id="pizzaImage" src="" alt="Pizza">
+        <p class="pizza-info" id="pizzaPrice"></p>
+    </div>
+
+    <script>
+        const pizzaData = {
+            margherita: {
+                name: "Margherita",
+                price: "€5.00",
+                image: "margherita.jpeg"
+            },
+            capricciosa: {
+                name: "Capricciosa",
+                price: "€7.50",
+                image: "capricciosa.jpeg"
+            },
+            diavola: {
+                name: "Diavola",
+                price: "€6.50",
+                image: "diavola.jpeg"
+            },
+            quattro_formaggi: {
+                name: "Quattro Formaggi",
+                price: "€8.00",
+                image: "4 formaggi.jpeg"
+
+            },
+                boscaiola: {
+                name: "Boscaiola",
+                price: "€9.00",
+                image: "Boscaiola.jpeg"
+
+            }
+        };
+
+        
+        const pizzaSelect = document.getElementById("pizzaSelect");
+        const pizzaDetails = document.getElementById("pizzaDetails");
+        const pizzaImage = document.getElementById("pizzaImage");
+        const pizzaPrice = document.getElementById("pizzaPrice");
+
+        pizzaSelect.addEventListener("change", function () {
+            const selectedPizza = pizzaSelect.value;
+
+            if (selectedPizza && pizzaData[selectedPizza]) {
+                const { name, price, image } = pizzaData[selectedPizza];
+                pizzaImage.src = image;
+                pizzaImage.alt = name;
+                pizzaPrice.textContent = `Prezzo: ${price}`;
+                pizzaDetails.style.display = "block";
+            } else {
+                pizzaDetails.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>
